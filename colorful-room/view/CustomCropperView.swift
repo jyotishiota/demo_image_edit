@@ -9,6 +9,7 @@
 import Foundation
 import SwiftUI
 import QCropper
+import PixelEnginePackage
 
 
 struct CustomCropperView: UIViewControllerRepresentable {
@@ -43,6 +44,22 @@ class CropperViewCoordinator: NSObject, UINavigationControllerDelegate, CropperV
     
     func cropperDidConfirm(_ cropper: CropperViewController, state: CropperState?) {
         PECtl.shared.cropperCtrl.setState(state)
+        
+        let editState: EditingStack = EditingStack.init(
+            source: StaticImageSource(source: cropper.originalImage),
+            // todo: need more code to caculator adjust with scale image
+            previewSize: CGSize(width: 512, height: 512 * cropper.originalImage.size.width / cropper.originalImage.size.height)
+            // previewSize: CGSize(width: self.originUI.size.width, height: self.originUI.size.height)
+        )
+        let originRender = cropper.originalImage.cropped(withCropperState: state!)
+        let source = StaticImageSource(source: convertUItoCI(from: originRender!))
+         
+        PECtl.shared.previewImage = editState.makeCustomRenderer(source: source)
+            .render(resolution: .full)
+//        PECtl.shared.setImage(image: editState.makeCustomRenderer(source: source)
+//            .render(resolution: .full))
+        PECtl.shared.setLutsAndRecipes(image: editState.makeCustomRenderer(source: source)
+            .render(resolution: .full))
         parent.presentationMode.wrappedValue.dismiss()
     }
     

@@ -94,8 +94,13 @@ class PECtl : ObservableObject{
     }
     
     
-    
-    
+    func setLutsAndRecipes(image: UIImage){
+        
+        if let smallImage = resizedImage(at: convertUItoCI(from: image), scale: 128 / self.originUI.size.height, aspectRatio: 1){
+            lutsCtrl.setImage(image: smallImage)
+            recipesCtrl.setImage(image: smallImage)
+        }
+    }
     
     func didReceive(action: PECtlAction) {
         switch action {
