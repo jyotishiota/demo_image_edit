@@ -22,6 +22,9 @@ class PECtl : ObservableObject{
     }
     
     // origin image: pick from gallery or camera
+    var originUIBeforeCrop:UIImage!
+    
+    // origin image: pick from gallery or camera
     var originUI:UIImage!
     // cache origin: conver from UI to CI
     var originCI:CIImage!
@@ -70,6 +73,7 @@ class PECtl : ObservableObject{
         }
         currentFilter = FilterModel.noneFilterModel
         self.originUI = image
+        self.originUIBeforeCrop = image
         
         self.originCI = convertUItoCI(from: image)
         

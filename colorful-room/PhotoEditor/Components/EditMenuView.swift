@@ -81,3 +81,14 @@ public enum EditView{
     case filter
     case recipe
 }
+
+struct EditMenuView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        Group {
+            EditMenuView()
+                .environmentObject(PECtl.shared)
+        }
+    }
+}
+

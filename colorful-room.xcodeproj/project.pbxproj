@@ -29,7 +29,6 @@
 		59752CFF286AF4B1001F919C /* NestedObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59752CFE286AF4B1001F919C /* NestedObservableObject.swift */; };
 		59752D01286B166F001F919C /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59752D00286B166F001F919C /* Recipe.swift */; };
 		597CAB9F271E6B45008E9588 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 597CAB9E271E6B45008E9588 /* StoreKit.framework */; };
-		59B31A1D271DA5B2002DADE8 /* PixelEnginePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 59B31A1C271DA5B2002DADE8 /* PixelEnginePackage */; };
 		59B31A25271DA837002DADE8 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B31A1F271DA837002DADE8 /* Collection.swift */; };
 		59B31A26271DA837002DADE8 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B31A20271DA837002DADE8 /* Data.swift */; };
 		59B31A2A271DA837002DADE8 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B31A24271DA837002DADE8 /* ImageSaver.swift */; };
@@ -77,6 +76,7 @@
 		59B31A95271DA892002DADE8 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B31A87271DA892002DADE8 /* AppTheme.swift */; };
 		59B31A96271DA892002DADE8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B31A88271DA892002DADE8 /* Utils.swift */; };
 		59B31A97271DA892002DADE8 /* AppContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B31A89271DA892002DADE8 /* AppContent.swift */; };
+		70A0D3F129D19D2B00DEB024 /* PixelEnginePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 70A0D3F029D19D2B00DEB024 /* PixelEnginePackage */; };
 		B99615FFF8B1F2C3A8EE01C7 /* Pods_colorful_room.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2ED19D827B9DE0F5467A29B /* Pods_colorful_room.framework */; };
 /* End PBXBuildFile section */
 
@@ -182,8 +182,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				597CAB9F271E6B45008E9588 /* StoreKit.framework in Frameworks */,
-				59B31A1D271DA5B2002DADE8 /* PixelEnginePackage in Frameworks */,
 				B99615FFF8B1F2C3A8EE01C7 /* Pods_colorful_room.framework in Frameworks */,
+				70A0D3F129D19D2B00DEB024 /* PixelEnginePackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +473,7 @@
 			);
 			name = "colorful-room";
 			packageProductDependencies = (
-				59B31A1C271DA5B2002DADE8 /* PixelEnginePackage */,
+				70A0D3F029D19D2B00DEB024 /* PixelEnginePackage */,
 			);
 			productName = "colorful-room";
 			productReference = 592B4E4D27132BF400BBF5BA /* colorful-room.app */;
@@ -548,7 +548,7 @@
 			);
 			mainGroup = 592B4E4427132BF400BBF5BA;
 			packageReferences = (
-				59B31A1B271DA5B2002DADE8 /* XCRemoteSwiftPackageReference "PixelEnginePackage" */,
+				70A0D3EF29D19D2B00DEB024 /* XCRemoteSwiftPackageReference "PixelEnginePackageIota" */,
 			);
 			productRefGroup = 592B4E4E27132BF400BBF5BA /* Products */;
 			projectDirPath = "";
@@ -1062,20 +1062,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		59B31A1B271DA5B2002DADE8 /* XCRemoteSwiftPackageReference "PixelEnginePackage" */ = {
+		70A0D3EF29D19D2B00DEB024 /* XCRemoteSwiftPackageReference "PixelEnginePackageIota" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/j1mmyto9/PixelEnginePackage";
+			repositoryURL = "https://github.com/jyotishiota/PixelEnginePackageIota";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		59B31A1C271DA5B2002DADE8 /* PixelEnginePackage */ = {
+		70A0D3F029D19D2B00DEB024 /* PixelEnginePackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 59B31A1B271DA5B2002DADE8 /* XCRemoteSwiftPackageReference "PixelEnginePackage" */;
+			package = 70A0D3EF29D19D2B00DEB024 /* XCRemoteSwiftPackageReference "PixelEnginePackageIota" */;
 			productName = PixelEnginePackage;
 		};
 /* End XCSwiftPackageProductDependency section */

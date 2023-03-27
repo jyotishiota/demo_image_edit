@@ -29,3 +29,13 @@ struct PhotoEditorView: View {
         }
     }
 }
+
+struct PhotoEditorView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        Group {
+            PhotoEditorView()
+                .environmentObject(PECtl.shared)
+        }
+    }
+}

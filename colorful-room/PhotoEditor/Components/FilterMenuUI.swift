@@ -103,3 +103,13 @@ struct FilterMenuUI: View {
         }
     }
 }
+
+struct FilterMenuUI_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        Group {
+            FilterMenuUI()
+                .environmentObject(PECtl.shared)
+        }
+    }
+}
