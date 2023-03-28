@@ -47,12 +47,12 @@ class CropperViewCoordinator: NSObject, UINavigationControllerDelegate, CropperV
         PECtl.shared.cropperCtrl.setState(state)
         
         let editState: EditingStack = EditingStack.init(
-            source: StaticImageSource(source: cropper.originalImage),
+            source: StaticImageSource(source:  PECtl.shared.originUI),
             // todo: need more code to caculator adjust with scale image
-            previewSize: CGSize(width: 512, height: 512 * cropper.originalImage.size.width / cropper.originalImage.size.height)
+            previewSize: CGSize(width: 512, height: 512 * PECtl.shared.originUI.size.width / PECtl.shared.originUI.size.height)
             // previewSize: CGSize(width: self.originUI.size.width, height: self.originUI.size.height)
         )
-        let originRender = cropper.originalImage.cropped(withCropperState: state!)
+        let originRender = PECtl.shared.originUI.cropped(withCropperState: state!)
         let source = StaticImageSource(source: convertUItoCI(from: originRender!))
          
         PECtl.shared.previewImage = editState.makeCustomRenderer(source: source)
@@ -63,7 +63,7 @@ class CropperViewCoordinator: NSObject, UINavigationControllerDelegate, CropperV
 //            .render(resolution: .full))
         PECtl.shared.setLutsAndRecipes(image: editState.makeCustomRenderer(source: source)
             .render(resolution: .full))
-        PECtl.shared.didReceive(action: PECtlAction.setFilter({ $0.exposure = nil }))
+        PECtl.shared.didReceive(action: PECtlAction.setFilter({ $0.fade = nil }))
         parent.presentationMode.wrappedValue.dismiss()
     }
     

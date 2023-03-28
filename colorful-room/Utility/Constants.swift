@@ -15,6 +15,10 @@ public class Constants{
         FilterModel("White Blance",image:"temperature", edit: EditMenu.white_balance),
         FilterModel("Tone",image: "tone", edit: EditMenu.tone),
         FilterModel("HSL",image: "hls", edit: EditMenu.hls),
-        FilterModel("Fade", edit: EditMenu.fade),
+        
+        // MARK :- todo
+        //fade filter removed need to add
+ 
+        //FilterModel("Fade", edit: EditMenu.fade),
     ]
 }
