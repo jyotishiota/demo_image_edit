@@ -32,6 +32,7 @@ struct EditMenuView: View {
                             self.currentView = .lut
                         }){
                             IconButton(self.currentView == .lut ? "edit-lut-highlight" : "edit-lut")
+                                .shimmering(active: PECtl.shared.lutsCtrl.showLoading, animation: .easeInOut(duration: 2).repeatCount(5, autoreverses: false).delay(1))
                         }
                         Button(action:{
                             if(self.shared.lutsCtrl.loadingLut == false){
@@ -40,16 +41,19 @@ struct EditMenuView: View {
                             }
                         }){
                             IconButton(self.currentView == .filter ? "edit-color-highlight" : "edit-color")
+                                .shimmering(active: PECtl.shared.lutsCtrl.showLoading, animation: .easeInOut(duration: 2).repeatCount(5, autoreverses: false).delay(1))
                         }
                         Button(action:{
                             self.currentView = .recipe
                         }){
                             IconButton(self.currentView == .recipe ? "edit-recipe-highlight" : "edit-recipe")
+                                .shimmering(active: PECtl.shared.lutsCtrl.showLoading, animation: .easeInOut(duration: 2).repeatCount(5, autoreverses: false).delay(1))
                         }
                         Button(action:{
                             self.shared.didReceive(action: PECtlAction.undo)
                         }){
                             IconButton("icon-undo")
+                                .shimmering(active: PECtl.shared.lutsCtrl.showLoading, animation: .easeInOut(duration: 2).repeatCount(5, autoreverses: false).delay(1))
                         }
                     }
                     .frame(width: geometry.size.width, height: 50)

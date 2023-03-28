@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2389C92B29D2BDC200B8B49F /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = 2389C92A29D2BDC200B8B49F /* Shimmer */; };
 		5909A0BD2792CADF00431609 /* RecipeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909A0BC2792CADF00431609 /* RecipeUtils.swift */; };
 		5924F5122794062C00BE7705 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924F5112794062C00BE7705 /* Constants.swift */; };
 		5924F515279408AE00BE7705 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924F514279408AE00BE7705 /* Action.swift */; };
@@ -181,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2389C92B29D2BDC200B8B49F /* Shimmer in Frameworks */,
 				597CAB9F271E6B45008E9588 /* StoreKit.framework in Frameworks */,
 				B99615FFF8B1F2C3A8EE01C7 /* Pods_colorful_room.framework in Frameworks */,
 				701A02DA29D293DC00BC09B9 /* PixelEnginePackage in Frameworks */,
@@ -474,6 +476,7 @@
 			name = "colorful-room";
 			packageProductDependencies = (
 				701A02D929D293DC00BC09B9 /* PixelEnginePackage */,
+				2389C92A29D2BDC200B8B49F /* Shimmer */,
 			);
 			productName = "colorful-room";
 			productReference = 592B4E4D27132BF400BBF5BA /* colorful-room.app */;
@@ -549,6 +552,7 @@
 			mainGroup = 592B4E4427132BF400BBF5BA;
 			packageReferences = (
 				701A02D829D293DC00BC09B9 /* XCRemoteSwiftPackageReference "PixelEnginePackageIota" */,
+				2389C92929D2BDC200B8B49F /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */,
 			);
 			productRefGroup = 592B4E4E27132BF400BBF5BA /* Products */;
 			projectDirPath = "";
@@ -1062,6 +1066,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2389C92929D2BDC200B8B49F /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/markiv/SwiftUI-Shimmer";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		701A02D829D293DC00BC09B9 /* XCRemoteSwiftPackageReference "PixelEnginePackageIota" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jyotishiota/PixelEnginePackageIota.git";
@@ -1073,6 +1085,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2389C92A29D2BDC200B8B49F /* Shimmer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2389C92929D2BDC200B8B49F /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */;
+			productName = Shimmer;
+		};
 		701A02D929D293DC00BC09B9 /* PixelEnginePackage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 701A02D829D293DC00BC09B9 /* XCRemoteSwiftPackageReference "PixelEnginePackageIota" */;
