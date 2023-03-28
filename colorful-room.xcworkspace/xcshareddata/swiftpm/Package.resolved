@@ -5,7 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jyotishiota/PixelEnginePackageIota.git",
       "state" : {
-        "revision" : "024bad032fd417d07f6bb98d15fc140d456f5daa"
+        "branch" : "main",
+        "revision" : "ae3be6ff9891e8770f38f16b297b09aca8c4c0ae"
       }
     },
     {

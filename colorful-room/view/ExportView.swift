@@ -35,10 +35,10 @@ struct ExportView: View {
                 .padding()
                 .padding(.trailing)
                 
-                Text("Export your photo")
+                Text("Save your photo")
                     .font(.system(size: 26, weight: .semibold))
                     .multilineTextAlignment(.center)
-                Text("You can download all that apply in your filter.\nAlways for FREE")
+                Text("Here is is your final image, Which will save to your starage")
                     .font(.system(size: 14))
                     .multilineTextAlignment(.center)
                     .foregroundColor(Color.myGray)
