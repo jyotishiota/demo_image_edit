@@ -48,7 +48,7 @@ struct LutMenuUI: View {
                         HStack(spacing: 16){
                             Spacer().frame(width: 0)
                         
-                            collectionButtonView(key: "", name: "All Luts", reader:reader)
+                            collectionButtonView(key: "", name: "All Filters", reader:reader)
                             //
                             ForEach(shared.lutsCtrl.collections, id: \.identifier) { collection in
                                 collectionButtonView(key: collection.identifier, name: collection.name,reader:reader)

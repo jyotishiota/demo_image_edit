@@ -36,21 +36,26 @@ struct PhotoEditView: View {
                     .edgesIgnoringSafeArea(.all)
                 VStack{
                     HStack{
-                        Button(action:{
+                        // MARK: - open gallery option removed
+                        
+                        /*Button(action:{
                             self.showImagePicker = true
                         }){
                             Text("Library")
                                 .foregroundColor(.white)
                                 .padding(.horizontal)
                                 .padding(.top, 8)
-                        }
+                        }*/
+                        
                         Spacer()
                         if(shared.previewImage != nil){
                             NavigationLink(destination: ExportView()){
-                                Text("Export")
+                                Text("Save")
+                                    .font(.headline)
                                     .foregroundColor(.white)
                                     .padding(.horizontal)
                                     .padding(.top, 8)
+                                
                             }
                         }
                     }
