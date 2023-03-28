@@ -1078,8 +1078,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jyotishiota/PixelEnginePackageIota.git";
 			requirement = {
-				kind = revision;
-				revision = 024bad032fd417d07f6bb98d15fc140d456f5daa;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

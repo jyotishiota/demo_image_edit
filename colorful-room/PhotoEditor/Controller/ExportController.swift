@@ -56,6 +56,7 @@ class ExportController : ObservableObject{
     func exportOrigin() {
         if let origin = originExport{
             ImageSaver().writeToPhotoAlbum(image: origin)
+            //ImageSaver().saveImageToDocumentDirectory(image: origin)
         }
         return
     }

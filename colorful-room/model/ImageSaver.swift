@@ -27,4 +27,33 @@ class ImageSaver: NSObject {
             print("Success!")
         }
     }
+    
+    func saveImageToDocumentDirectory(image: UIImage) {
+        print("test")
+        var objCBool: ObjCBool = true
+        let mainPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0];
+        print(mainPath)
+        let folderPath = mainPath + "/Lol/"
+
+        let isExist = FileManager.default.fileExists(atPath: folderPath, isDirectory: &objCBool)
+        if !isExist {
+            do {
+                try FileManager.default.createDirectory(atPath: folderPath, withIntermediateDirectories: true, attributes: nil)
+            } catch {
+                print("error \(error)")
+            }
+        }
+
+        let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let imageName = "lol.png"
+        let imageUrl = documentDirectory.appendingPathComponent("Lol/\(imageName)")
+        if let data = image.jpegData(compressionQuality: 1.0){
+            do {
+                try data.write(to: imageUrl)
+                print(" saving")
+            } catch {
+                print("error saving", error)
+            }
+        }
+    }
 }
