@@ -76,7 +76,7 @@
 		59B31A95271DA892002DADE8 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B31A87271DA892002DADE8 /* AppTheme.swift */; };
 		59B31A96271DA892002DADE8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B31A88271DA892002DADE8 /* Utils.swift */; };
 		59B31A97271DA892002DADE8 /* AppContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B31A89271DA892002DADE8 /* AppContent.swift */; };
-		70A0D3F129D19D2B00DEB024 /* PixelEnginePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 70A0D3F029D19D2B00DEB024 /* PixelEnginePackage */; };
+		701A02DA29D293DC00BC09B9 /* PixelEnginePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 701A02D929D293DC00BC09B9 /* PixelEnginePackage */; };
 		B99615FFF8B1F2C3A8EE01C7 /* Pods_colorful_room.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2ED19D827B9DE0F5467A29B /* Pods_colorful_room.framework */; };
 /* End PBXBuildFile section */
 
@@ -183,7 +183,7 @@
 			files = (
 				597CAB9F271E6B45008E9588 /* StoreKit.framework in Frameworks */,
 				B99615FFF8B1F2C3A8EE01C7 /* Pods_colorful_room.framework in Frameworks */,
-				70A0D3F129D19D2B00DEB024 /* PixelEnginePackage in Frameworks */,
+				701A02DA29D293DC00BC09B9 /* PixelEnginePackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +473,7 @@
 			);
 			name = "colorful-room";
 			packageProductDependencies = (
-				70A0D3F029D19D2B00DEB024 /* PixelEnginePackage */,
+				701A02D929D293DC00BC09B9 /* PixelEnginePackage */,
 			);
 			productName = "colorful-room";
 			productReference = 592B4E4D27132BF400BBF5BA /* colorful-room.app */;
@@ -548,7 +548,7 @@
 			);
 			mainGroup = 592B4E4427132BF400BBF5BA;
 			packageReferences = (
-				70A0D3EF29D19D2B00DEB024 /* XCRemoteSwiftPackageReference "PixelEnginePackageIota" */,
+				701A02D829D293DC00BC09B9 /* XCRemoteSwiftPackageReference "PixelEnginePackageIota" */,
 			);
 			productRefGroup = 592B4E4E27132BF400BBF5BA /* Products */;
 			projectDirPath = "";
@@ -1062,20 +1062,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		70A0D3EF29D19D2B00DEB024 /* XCRemoteSwiftPackageReference "PixelEnginePackageIota" */ = {
+		701A02D829D293DC00BC09B9 /* XCRemoteSwiftPackageReference "PixelEnginePackageIota" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jyotishiota/PixelEnginePackageIota";
+			repositoryURL = "https://github.com/jyotishiota/PixelEnginePackageIota.git";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = revision;
+				revision = 024bad032fd417d07f6bb98d15fc140d456f5daa;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		70A0D3F029D19D2B00DEB024 /* PixelEnginePackage */ = {
+		701A02D929D293DC00BC09B9 /* PixelEnginePackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 70A0D3EF29D19D2B00DEB024 /* XCRemoteSwiftPackageReference "PixelEnginePackageIota" */;
+			package = 701A02D829D293DC00BC09B9 /* XCRemoteSwiftPackageReference "PixelEnginePackageIota" */;
 			productName = PixelEnginePackage;
 		};
 /* End XCSwiftPackageProductDependency section */

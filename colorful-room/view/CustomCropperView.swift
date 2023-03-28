@@ -20,8 +20,8 @@ struct CustomCropperView: UIViewControllerRepresentable {
     
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<CustomCropperView>) -> CropperViewController {
-        //shared.originUIBeforeCrop = shared.editState.makeRenderer().render(resolution: .full)
-        let picker = CropperViewController(originalImage: shared.originUI ?? UIImage(), initialState: shared.cropperCtrl.state)
+        shared.originUIBeforeCrop = shared.editState.makeRenderer().render(resolution: .full)
+        let picker = CropperViewController(originalImage: shared.originUIBeforeCrop ?? UIImage(), initialState: shared.cropperCtrl.state)
         picker.delegate = context.coordinator
         return picker
     }
@@ -63,6 +63,7 @@ class CropperViewCoordinator: NSObject, UINavigationControllerDelegate, CropperV
 //            .render(resolution: .full))
         PECtl.shared.setLutsAndRecipes(image: editState.makeCustomRenderer(source: source)
             .render(resolution: .full))
+        PECtl.shared.didReceive(action: PECtlAction.setFilter({ $0.exposure = nil }))
         parent.presentationMode.wrappedValue.dismiss()
     }
     
