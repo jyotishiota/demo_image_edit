@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Shimmer
 
 struct LutMenuUI: View {
     
@@ -49,9 +50,11 @@ struct LutMenuUI: View {
                             Spacer().frame(width: 0)
                         
                             collectionButtonView(key: "", name: "All Filters", reader:reader)
+                                .shimmering(active: PECtl.shared.lutsCtrl.showLoading, animation: .easeInOut(duration: 2).repeatCount(5, autoreverses: false).delay(1))
                             //
                             ForEach(shared.lutsCtrl.collections, id: \.identifier) { collection in
                                 collectionButtonView(key: collection.identifier, name: collection.name,reader:reader)
+                                    .shimmering(active: PECtl.shared.lutsCtrl.showLoading, animation: .easeInOut(duration: 2).repeatCount(5, autoreverses: false).delay(1))
                             }
                             Spacer().frame(width: 0)
                         }
@@ -88,12 +91,20 @@ struct LutMenuUILoading: View{
         HStack(spacing: 12){
             Spacer().frame(width: 0)
             LutLoadingButton(name: "Original", on: true)
+                .shimmering(active: PECtl.shared.lutsCtrl.showLoading, animation: .easeInOut(duration: 2).repeatCount(5, autoreverses: false).delay(1))
             Rectangle()
                 .fill(Color.myDivider)
                 .frame(width: 1, height: 92)
-            LutLoadingButton(name: "LUT 1", on: false)
-            LutLoadingButton(name: "LUT 2", on: false)
-            LutLoadingButton(name: "LUT 3", on: false)
+            LutLoadingButton(name: "Filter 1", on: false)
+                .shimmering(active: PECtl.shared.lutsCtrl.showLoading, animation: .easeInOut(duration: 2).repeatCount(5, autoreverses: false).delay(1))
+            LutLoadingButton(name: "Filter 2", on: false)
+                .shimmering(active: PECtl.shared.lutsCtrl.showLoading, animation: .easeInOut(duration: 2).repeatCount(5, autoreverses: false).delay(1))
+            LutLoadingButton(name: "Filter 3", on: false)
+                .shimmering(active: PECtl.shared.lutsCtrl.showLoading, animation: .easeInOut(duration: 2).repeatCount(5, autoreverses: false).delay(1))
+            LutLoadingButton(name: "Filter 4", on: false)
+                .shimmering(active: PECtl.shared.lutsCtrl.showLoading, animation: .easeInOut(duration: 2).repeatCount(5, autoreverses: false).delay(1))
+            LutLoadingButton(name: "Filter 5", on: false)
+                .shimmering(active: PECtl.shared.lutsCtrl.showLoading, animation: .easeInOut(duration: 2).repeatCount(5, autoreverses: false).delay(1))
             Spacer().frame(width: 0)
         }
     }
